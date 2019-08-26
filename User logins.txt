@@ -1,0 +1,5 @@
+Username	:	Password
+1001		|	student1
+1002		|	studetn2
+5001		|	lecturer
+5002		|	lecturer
