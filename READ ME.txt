@@ -1,0 +1,23 @@
+All Project Documentation in Documentation Folder
+- Final Project Report
+- Final User Guide
+- Final Deployment Guide
+- Project Contribution Statement - Chong Jia Hao
+- Project Contribution Statement - KYAW MYO AUNG
+- Project Contribution Statement - Marcus Tan
+- Project Contribution Statement - Wu Chujun
+
+All Video Demos in "Demo Videos.zip"
+- Demo1_Deployment
+- Demo2_Functions_UserGuide
+- Demo3_Trapdoor Knapsack Simulator
+
+SourceCode.zip houses the code needed to run CryptBase
+- AdminLTE-2.4.10	(front end template)
+	-pages_new	(house html content for CryptBase)
+	-dist/js	(house javascript for CryptBase)
+- node_modules		(house all modules needed for CryptBase)
+- dbScript_v2.1.sql	(script to populate MySQL for CryptBase)
+- server.js		(NodeJS backend server)
+- "User logins.txt"	(information on user logins)
+
