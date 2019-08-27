@@ -5,7 +5,7 @@ An on Cryptographic Algorithm education platform.
 Running on NodeJS, AnimeJS and MySQL.
 
 ------------------------------------------------------------
-Refer to Final Deployement guide on how to deploy CryptBase.
+Refer to Final Deployement guide(submitted) on how to deploy CryptBase.
 ------------------------------------------------------------
 ~ Ubuntu 18.04
 ~ MySQL server 5.7
