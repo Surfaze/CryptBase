@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CryptBase | Animation </title>
+  <!-- Tell the bRowser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    
+  
+  
+  <!--JH include start-->
+  <style>
+  .textCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+  }
+  .boxElement {
+    position:  relative;
+    width: 3em;
+    height: 3em;
+    margin-top: 0.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .calElement {
+    position:  relative;
+    height: 3em;
+    margin-top: 0.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .pkElement {
+    background: #0080bb;
+  }
+  .pubkeyElement {
+    background: #34eb40;
+  }
+
+  </style>
+  <!--JH include end-->
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    var fullName = "{{ fullName }}";
+    var userType = "{{ userType }}";
+
+    console.log(fullName);
+  </script>
+  
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<script>
+  if (userType == "student"){
+      document.write("<body class=\"hold-transition skin-blue sidebar-mini\">")
+  } else {
+      document.write("<body class=\"hold-transition skin-red sidebar-mini\">")
+  }
+</script>
+
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="/home" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Crypt</b>Base</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="dist/img_new/userDefault_girl.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">
+                <script>
+                  document.write(fullName)
+                </script>
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="dist/img_new/userDefault_girl.png" class="img-circle" alt="User Image">
+
+                <p>
+                  <script>
+                  document.write(fullName)
+                  </script> 
+                  - 
+                  <script>
+                  document.write(userType)
+                  </script>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/profile" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/signout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <div class="user-panel">
+        <div class="pull-left image">
+          <img src="/dist/img_new/userDefault_girl.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>
+            <script>
+              document.write(fullName)
+            </script>
+          </p>
+        </div>
+      </div>
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <!-- Sidebar ============================================================================================================================= -->
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+          <!-- Optionally, you can add icons to the links -->
+          <li class="active"><a href="/home"><i class="fa fa-link"></i> <span>Home</span></a></li>
+          <li class="active"><a href="/profile"><i class="fa fa-link"></i> <span>Profile</span></a></li>
+        </ul>
+        <!-- /.sidebar-menu -->
+      <!-- /Sidebar ============================================================================================================================= -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <!--JH include start-->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Trapdoor Knapsack Cryptosystem 
+        <small>Optional description</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid" id="trapdoorCal-ContentSession">
+      
+    <div class="row">
+        <div class="col-md-6">
+          <!-- anime.js -->
+      <script src="dist/js/anime.js"></script>
+          <script>
+      var pubkeys = '';
+      var binMsg = '';
+      var cText = '';
+      var y ='';
+      var inverse = '';
+            $(document).ready(() =>{
+              console.log("In ajax");
+              // TODO: add in form input validation
+
+
+              // Submit #form_initSetup to nodejs function initSetup
+              // $('#form_initSetup').on('submit', function(event){
+              $('#btn_initSetupSubmit').click(()=> {
+                console.log("Submitted::form_initSetup" + new Date());
+
+                // Update HTML <Algo Information table> with user input value
+                $('#infoPrivateKey').html($('#initSetup_privateKey').val());
+                $('#infoPrime').html("<span style=\"color: red\">"+$('#initSetup_prime').val()+"</span>");
+                $('#infoMultiplier').html("<span style=\"color: #c800ff\">"+$('#initSetup_multiplier').val()+"</span>");
+                $('#infoOrigMsg').html($('#initSetup_msg').val());
+        
+                // submit value to nodejs [initSetupFunc] function
+                $.ajax({
+                  type:"POST",
+                  url: 'initSetupFunc',
+          async: false,
+                  data: { // passing the 3 values
+                    ajaxPrivateKey: $('#initSetup_privateKey').val(),
+                    ajaxPrime: $('#initSetup_prime').val(),
+                    ajaxMultiplier: $('#initSetup_multiplier').val(),
+                    ajaxMessage:$('#initSetup_msg').val()
+                  },
+                  success: (data) => {
+                    // Update values
+          pubkeys = data.publicKey;
+                    $('#infoPublicKey').html(pubkeys);
+          inverse = data.multiplierInverse;
+                    $('#infoMultiplierInverse').html(inverse);
+          binMsg = data.messageInBinary;
+                    $('#infoMsgBinary').html(binMsg);
+          cText = data.cipherText;
+                    $('#infoCipherText').html(cText);
+          y = data.y;
+                    $('#infoY').html(y);
+                    $('#infoDecryptedMsgBinary').html(data.decryptedMsgBinary);
+                    $('#infoDecryptedMsg').html(data.decryptedMsg);
+                  },
+                  error: function(){
+                    $('#infoPublicKey').html("NODEJS RETURN ERROR");
+                  }
+                });
+        
+        
+        // Update visualizeTD
+        var modulo = $('#initSetup_prime').val();
+        var multiplier = $('#initSetup_multiplier').val();
+        var pks = $('#initSetup_privateKey').val();
+        var pkArray = pks.split(',');
+        //console.log(pubkeys);
+        var pubkeysArray = pubkeys.split(',');
+        //console.log(pubkeysArray);
+        //print out private keys, calculation and public keys
+        var printKeyGen = function() {
+          //clean element
+          document.getElementById("moduloHolder").innerHTML = "<label>Modulo:</label><h4 style=\"color: red\">"+modulo+"</h4>";
+          document.getElementById("multiplierHolder").innerHTML = "<label>Multiplier:</label><h4 style=\"color: #c800ff\">"+multiplier+"</h4>";
+          document.getElementById("pkHolder").innerHTML = "<label>Private Keys:</label>";
+          document.getElementById("calHolder").innerHTML = "<label>Calculation: </label>";
+          document.getElementById("pubkeyHolder").innerHTML = "<label>Public Keys:</label>";
+          //print
+          pkArray.forEach(loopPrint);
+          function loopPrint(privateKey, index) {
+            document.getElementById("pkHolder").innerHTML += "<div class=\"pkElement boxElement aRow"+(index+1)+"\" id=\"pkbox"+(index+1)+"\"><h4 class=\"textCenter\" id=\"pkbox"+(index+1)+"text\">"+privateKey+"</h4></div>";
+            document.getElementById("calHolder").innerHTML += "<div class=\"calElement aRow"+(index+1)+"\"  id=\"cal"+(index+1)+"\"><p class=\"textCenter\" style=\"color: black; white-space: nowrap;\" id=\"cal"+(index+1)+"text\"> x <span style=\"color: #c800ff\">"+multiplier+"</span> Mod <span style=\"color: red\">"+modulo+"</span> =</p></div>";
+          }
+          var targetRows = [];
+          pubkeysArray.forEach(loopPrint2);
+          function loopPrint2(publicKey, index) {
+            document.getElementById("pubkeyHolder").innerHTML += "<div class=\"pubkeyElement boxElement  aRow"+(index+1)+"\" id=\"pubkeybox"+(index+1)+"\"><h4 class=\"textCenter\"  style=\"color: white;\" id=\"pubkeybox"+(index+1)+"text\">"+publicKey+"</h4></div>"; 
+            targetRows.push('.aRow'+(index+1));
+          }
+          return targetRows;
+        }
+        
+        //print out String Preparation
+        var msg = $('#initSetup_msg').val();
+        document.getElementById("messageHolder").innerHTML = "<label>Message:</label><h4 style=\"word-wrap:break-word;\">"+msg+"</h4>";
+        document.getElementById("binMessageHolder").innerHTML = "<label>Binary Message:</label><h4 style=\"word-wrap:break-word;\">"+removeComma(binMsg)+"</h4>";
+        var printStrPrep = function() {
+          document.getElementById("strHolder").innerHTML = "<label>String</label></br><label>Character:</label>";
+          document.getElementById("binHolder").innerHTML = "<label>Binary</label></br><label>Representation: </label>";
+          
+          
+          var msgArrayWord = msg.split(' ');
+          var msgArrayTemp = new Array();
+          for(var i =0; i < msgArrayWord.length; i++){
+            msgArrayTemp.push(msgArrayWord[i]);
+            if(i != msgArrayWord.length-1){
+              msgArrayTemp.push(" ");
+            }
+          }
+          var msgArray = new Array();
+          //loop through msgArrayTemp
+          for(var i =0; i < msgArrayTemp.length; i++){
+            //loop through string at specific msgArrayTemp index
+            for(var j =0; j < msgArrayTemp[i].length; j++){
+              if(msgArrayTemp[i][j] == " "){
+                msgArray.push("\"Blank\"");
+              }else{
+                msgArray.push(msgArrayTemp[i][j]);
+              }
+            }
+          }
+          
+          //var binMsgArray = binMsg.split(',');
+          var binMsgArray = new Array;
+          var cleanBinMsg = removeComma(binMsg);
+          var bitsize = 8; //1 character is 8bit
+          
+          
+          var targetRows = [];
+          //msgArray.forEach(loopPrint);
+          //function loopPrint(character, index) 
+          for(var i=0;i<msgArray.length;i++){
+            document.getElementById("strHolder").innerHTML += "<p class=\"bRow"+(i+1)+"\"  style=\"color: back;\" id=\"char"+(i+1)+"\">"+msgArray[i]+"</p>"; 
+            targetRows.push('.bRow'+(i+1));
+            binMsgArray.push('');
+            binMsgArray[i] += cleanBinMsg.substring(i*bitsize, (i+1)*bitsize);
+          }
+          
+          
+          
+          
+          
+          for(var i=0;i<(binMsgArray.length);i++){
+            document.getElementById("binHolder").innerHTML += "<p class=\"bRow"+(i+1)+"\"  style=\"color: back;\" id=\"bin"+(i+1)+"\">"+binMsgArray[i]+"</p>"; 
+          }
+          
+          return targetRows;
+        }
+        
+        //print out Binary Preparation
+        //clean the document
+        document.getElementById("BinMapHolder").innerHTML = "<div class=\"col-md-12 col-sm-12 col-xs-12\" ><label>Number of Private Keys <span style=\"color: red;\">=</span> Bit size of group:</label><h4>"+pkArray.length+"</h4>";
+        document.getElementById("binMessageHolder2").innerHTML = "";
+        document.getElementById("groupHolderTable").innerHTML = "";
+        //divide the binary into groups of (number of private keys)
+        var cleanBinMsg = removeComma(binMsg);
+        var remainder = cleanBinMsg.length % pkArray.length;
+        var zeroPad = 0;
+        if(remainder != 0){
+          zeroPad = pkArray.length - remainder;
+        }
+        document.getElementById("BinMapHolder").innerHTML += "<div class=\"col-md-12 col-sm-12 col-xs-12\" ><label>Number of padding required for multiple of "+pkArray.length+":</label><h4 style=\"color: red;\">"+zeroPad+"</h4>";
+        var padding = '';
+        for(var i=0; i<zeroPad; i++){
+          padding += "0";
+        }
+        
+        //padd with addtional zeros
+//        for(var i=0; i<zeroPad; i++){
+//          cleanBinMsg = cleanBinMsg + "0";
+//        }
+        var cleanBinMsgArray = cleanBinMsg.split('');
+        var binGroupArray = new Array();
+        var index = 0;
+        while(cleanBinMsgArray.length != 0){
+          binGroupArray.push('');
+          var loopSize = 0;
+          if(cleanBinMsgArray.length <8){
+            loopSize = cleanBinMsgArray.length;
+          }else{
+            loopSize = pkArray.length;
+          }
+          for(var i= 0; i<loopSize; i++){
+            binGroupArray[index] += cleanBinMsgArray.shift();
+          }
+          index++;
+        }
+        var binGroupArrayArray = new Array();
+        var printBinPrep = function() {
+          var targetRows = [];
+          
+          for(var i=0;i<(binGroupArray.length-1);i++){
+            document.getElementById("binMessageHolder2").innerHTML += "<span id=\"cRow"+(i+1)+"out\">"+binGroupArray[i]+"</span>";
+            document.getElementById("groupHolderTable").innerHTML += "<tr><th style=\"font-size: 1.4em;\">Group "+(i+1)+": </th><td id=\"cRow"+(i+1)+"in\">"+binGroupArray[i]+"</td></tr>";
+            targetRows.push('#cRow'+(i+1));
+            binGroupArrayArray.push('');
+            binGroupArrayArray[i] += binGroupArray[i].split('');
+          }
+          //do for last include padding span
+          document.getElementById("binMessageHolder2").innerHTML += "<span id=\"cRow"+(binGroupArray.length-1+1)+"out\">"+binGroupArray[binGroupArray.length-1]+"</span><span id=\"cRow"+(binGroupArray.length-1+1)+"out\" style=\"color: red;\">"+padding+"</span>";
+          document.getElementById("groupHolderTable").innerHTML += "<tr><th style=\"font-size: 1.4em;\">Group "+(binGroupArray.length-1+1)+": </th><td id=\"cRow"+(binGroupArray.length-1+1)+"in\">"+binGroupArray[binGroupArray.length-1]+"<span style=\"color: red;\">"+padding+"</span></td></tr>";
+          targetRows.push('#cRow'+(binGroupArray.length-1+1));
+          binGroupArrayArray.push('');
+          binGroupArrayArray[binGroupArray.length-1] += binGroupArray[binGroupArray.length-1].split('');
+          
+//          binGroupArray.forEach(loopPrint);
+//          function loopPrint(group, index) {
+//            document.getElementById("binMessageHolder2").innerHTML += "<span id=\"cRow"+(index+1)+"out\">"+group+"</span>";
+//            document.getElementById("groupHolderTable").innerHTML += "<tr><th style=\"font-size: 1.4em;\">Group "+(index+1)+": </th><td id=\"cRow"+(index+1)+"in\">"+group+"</td></tr>";
+//            targetRows.push('#cRow'+(index+1));
+//            binGroupArrayArray.push('');
+//            binGroupArrayArray[index] += group.split('');
+//          }
+          return targetRows;
+        }
+        
+        
+        //print Calculate Encrypted Value
+        //clean
+        document.getElementById("calEncDiv").innerHTML = "<div class=\"col-md-12 col-sm-12 col-xs-12\"><div id=\"encryptedHeaderHolder\" class=\"col-md-3 col-sm-3 col-xs-3\"><label>Encrypted Value:</label></div><div id=\"calEncHeaderHolder\" class=\"col-md-9 col-sm-9 col-xs-9\" style=\"border-left-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden; text-align: center\"><label>Calculation:</label></div></div>";
+        
+        
+        
+        var cTextArray = cText.split(',');
+        
+        var printCalEncVal = function() {
+          var targetRows = [];
+          targetRows.push(pubkeysArray.length);
+          
+          //print row with binary and Key
+          var returnRows = function (rowIndex){
+            var rows = "<div id=\"calEncHolder"+(rowIndex+1)+"\" class=\"col-md-9 col-sm-9 col-xs-9 dRow"+(rowIndex+1)+"\" ><div class=\"row\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0;\">";
+            var tempString = binGroupArrayArray[rowIndex].split(',');
+            for(var i=0; i<tempString.length;i++){
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1 row"+(rowIndex+1)+"bin"+tempString[i]+"\" id=\"\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb;\"><h6 class=\"textCenter\" style=\"color: white;\">"+tempString[i]+"</h6></div>";
+              if(i<(tempString.length-1))
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb; opacity: 0;\"><h6 class=\"textCenter\" style=\"color: white; \">+</h6></div>";
+            }
+            
+            rows += "</div><div class=\"row\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0;\">";
+            for(var i=0; i<pubkeysArray.length;i++){
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1 row"+(rowIndex+1)+"bin"+tempString[i]+"\" id=\"\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb;\"><h6 class=\"textCenter\" style=\"color: white;\">"+pubkeysArray[i]+"</h6></div>";
+              if(i<(pubkeysArray.length-1))
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em;\"><h6 class=\"textCenter\" style=\"color: black;\">+</h6></div>";
+            }
+            rows += "</div></div>";
+            return rows;
+          }
+          
+          cTextArray.forEach(loopPrint);
+          function loopPrint(encrypted, index) {
+            document.getElementById("calEncDiv").innerHTML += "<div class=\"col-md-12 col-sm-12 col-xs-12\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;\"><div id=\"encryptedHolder"+(index+1)+"\" class=\"col-md-3 col-sm-3 col-xs-3 dRow"+(index+1)+"\" style=\"overflow: hidden;\"><div>Group "+(index+1)+":</div><div id=\"encryptedValue"+(index+1)+"\">"+encrypted+"</div></div>"+
+            returnRows(index)
+            +"</div>";
+            targetRows.push('.dRow'+(index+1));
+            
+          }
+          document.getElementById("calEncDiv").innerHTML += "<div class=\"col-md-12 col-sm-12 col-xs-12\" style=\"height: 30; overflow: hidden;\"><label>Final Cipher Text:</label><p id=\"finalValues\">"+cText+"</p ></div>"
+          
+          return targetRows;
+        }
+        
+        
+        
+        
+        
+        //decryption
+        //cipher text with Inverse Multipler
+        var printInverse = function() {
+          //clean element
+          document.getElementById("multiplierInverseHolder").innerHTML = "<label>Calculated Inverse of "+$('#initSetup_multiplier').val()+":</label><h4 style=\"color: #4281f5\">"+inverse+"</h4>";
+          document.getElementById("modHolder").innerHTML = "<label>Modulo:</label><h4 style=\"color: red;\">"+modulo+"</h4>";
+          document.getElementById("cipherHolder").innerHTML = "<label>Cipher Texts:</label>";
+          document.getElementById("decryptCalHolder").innerHTML = "<label>Calculation | a^-1 x T mod p:</label>";
+          document.getElementById("tempValueHolder").innerHTML = "<label>Result:</label>";
+          //print
+          cTextArray.forEach(loopPrint);
+          function loopPrint(cText, index) {
+            document.getElementById("cipherHolder").innerHTML += "<div class=\"pkElement boxElement eRow"+(index+1)+"\" id=\"ctbox"+(index+1)+"\"><h4 class=\"textCenter\">"+cText+"</h4></div>";
+            document.getElementById("decryptCalHolder").innerHTML += "<div class=\"calElement eRow"+(index+1)+"\"><p class=\"textCenter\" style=\"color: black; white-space: nowrap;\"><span style=\"color: #4281f5\">"+inverse+"</span> x "+cText+" Mod <span style=\"color: red\">"+modulo+"</span> =</p></div>";
+          }
+          var targetRows = [];
+          var yArray = y.split(',');
+          yArray.forEach(loopPrint2);
+          function loopPrint2(yVal, index) {
+            document.getElementById("tempValueHolder").innerHTML += "<div class=\"pubkeyElement boxElement  eRow"+(index+1)+"\" id=\"yValBox"+(index+1)+"\"><h4 class=\"textCenter\"  style=\"color: white;\" >"+yVal+"</h4></div>"; 
+            targetRows.push('.eRow'+(index+1));
+          }
+          return targetRows;
+        }
+        
+        
+        
+        
+        //print out Trapdoor
+        document.getElementById("trapdoorBody").innerHTML = "<div class=\"col-md-12 col-sm-12 col-xs-12\"></div><label style=\"word-wrap:break-word;\">Private keys are super increase, hence we subtract the largest value available from the set of Private keys till we achieve Zero</label><h4>The keys used will be represented in binary as 1.</h4>";
+        var printTrapdoorCal = function() {
+          var targetRows = [];
+          targetRows.push(pkArray.length);
+          
+          //print row with binary and Key
+          var returnRows = function (rowIndex){
+            var rows = "<div id=\"\" class=\"col-md-9 col-sm-9 col-xs-9 fRow"+(rowIndex+1)+"\" ><div class=\"row\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0;\">";
+            var tempString = binGroupArrayArray[rowIndex].split(',');
+            for(var i=0; i<tempString.length;i++){
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1 frow"+(rowIndex+1)+"bin"+tempString[i]+"i"+i+"\" id=\"\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb;\"><h6 class=\"textCenter\" style=\"color: white;\">"+tempString[i]+"</h6></div>";
+              if(i<(tempString.length-1))
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb; opacity: 0;\"><h6 class=\"textCenter\" style=\"color: white; \">+</h6></div>";
+            }
+            
+            rows += "</div><div class=\"row\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0;\">";
+            for(var i=0; i<pkArray.length;i++){
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1 frow"+(rowIndex+1)+"bin"+tempString[i]+"i"+i+"\" id=\"\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em; background: #0080bb;\"><h6 class=\"textCenter\" style=\"color: white;\">"+pkArray[i]+"</h6></div>";
+              if(i<(pkArray.length-1))
+              rows += "<div class=\"col-md-1 col-sm-1 col-xs-1\" style=\"margin: 0.1em; height: 1.5em; width: 1.5em;\"><h6 class=\"textCenter\" style=\"color: black;\">+</h6></div>";
+            }
+            rows += "</div></div>";
+            return rows;
+          }
+          var yArray = y.split(',');
+          yArray.forEach(loopPrint);
+          function loopPrint(yVal, index) {
+            document.getElementById("trapdoorBody").innerHTML += "<div class=\"col-md-12 col-sm-12 col-xs-12\" style=\"border-bottom-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;\"><div id=\"valueHolder"+(index+1)+"\" class=\"col-md-3 col-sm-3 col-xs-3 fRow"+(index+1)+"\" style=\"overflow: hidden;\"><h4>"+yVal+":</h4><p id=\"dBin"+(index+1)+"\"  >"+binGroupArray[index]+"</p></div>"+
+            returnRows(index)
+            +"</div>";
+            targetRows.push('.fRow'+(index+1));
+            
+          }
+          document.getElementById("trapdoorBody").innerHTML += "<div class=\"col-md-12 col-sm-12 col-xs-12\" style=\"height: 30; overflow: hidden;\"><label>Final Binaries:</label><p id=\"finalBinValues\">"+cleanBinMsg+"</p ></div>"
+          
+          return targetRows;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        visualizeTD(printKeyGen(), printStrPrep(), printBinPrep(), printCalEncVal(), printInverse(), printTrapdoorCal());
+        
+              });
+            }); // end of document ready
+      
+      var visualizeTD = function(targetRows1, targetRows2, targetRows3, targetRows4, targetRows5, targetRows6) {
+        //Key Generation
+        var visualizeTDprogress1 = document.querySelector('#progress1');
+        var timelineTDKeyGen = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress1.value = timelineTDKeyGen.progress;
+          }
+        });
+        targetRows1.forEach(loopPrint);
+        function loopPrint(rowTD, index) {
+          timelineTDKeyGen.add({
+            targets: '#pubkeybox'+(index+1)+'text',
+            opacity: 0,
+          })
+          .add({
+            targets: rowTD,
+            translateX: [-300, 0],
+            delay: anime.stagger(200),
+          })
+          .add({
+            targets: '#pubkeybox'+(index+1)+'text',
+            opacity: 1,
+          });
+        }
+//          timelineTDKeyGen.add({
+//            targets: ' .row1',
+//            translateX: [-300, 0],
+//            delay: anime.stagger(200)
+          //easing: 'linear'
+//          });
+        
+        document.querySelector('#play1').onclick = timelineTDKeyGen.play;
+        document.querySelector('#pause1').onclick = timelineTDKeyGen.pause;
+        document.querySelector('#restart1').onclick = timelineTDKeyGen.restart;
+        
+        visualizeTDprogress1.addEventListener('input', function() {
+          timelineTDKeyGen.seek(timelineTDKeyGen.duration * (visualizeTDprogress1.value / 100));
+        });
+        
+        
+        //String Preparation
+        var visualizeTDprogress2 = document.querySelector('#progress2');
+        var timelineTDStrPrep = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress2.value = timelineTDStrPrep.progress;
+          }
+        });
+        
+        targetRows2.forEach(loopPrint2);
+        function loopPrint2(rowTD, index) {
+          timelineTDStrPrep.add({
+            targets: rowTD,
+            opacity: [0, 1],
+            delay: anime.stagger(200),
+          });
+        }
+        
+        
+        document.querySelector('#play2').onclick = timelineTDStrPrep.play;
+        document.querySelector('#pause2').onclick = timelineTDStrPrep.pause;
+        document.querySelector('#restart2').onclick = timelineTDStrPrep.restart;
+        
+        visualizeTDprogress2.addEventListener('input', function() {
+          timelineTDStrPrep.seek(timelineTDStrPrep.duration * (visualizeTDprogress2.value / 100));
+        });
+        
+        
+        //Binary Preparation (padding)
+        var visualizeTDprogress3 = document.querySelector('#progress3');
+        var timelineTDBinPrep = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress3.value = timelineTDBinPrep.progress;
+          }
+        });
+        
+        targetRows3.forEach(loopPrint3);
+        function loopPrint3(rowTD, index) {
+          timelineTDBinPrep.add({
+            targets: rowTD+"out",
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: rowTD+"in",
+            translateX: [300, 0],
+          }, '-=700');
+        }
+        
+        
+        document.querySelector('#play3').onclick = timelineTDBinPrep.play;
+        document.querySelector('#pause3').onclick = timelineTDBinPrep.pause;
+        document.querySelector('#restart3').onclick = timelineTDBinPrep.restart;
+        
+        visualizeTDprogress3.addEventListener('input', function() {
+          timelineTDBinPrep.seek(timelineTDBinPrep.duration * (visualizeTDprogress3.value / 100));
+        });
+        
+        
+        //Calculate Encrypted Values
+        var visualizeTDprogress4 = document.querySelector('#progress4');
+        var timelineTDcalEncVal = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress4.value = timelineTDcalEncVal.progress;
+          }
+        });
+        
+        var numberOfKeys = targetRows4.shift();
+        
+        for(var i=0; i<targetRows4.length; i++){
+          timelineTDcalEncVal.add({
+            targets: '#encryptedValue'+(i+1),
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: targetRows4[i],
+            translateY: [-300, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: '.row'+(i+1)+'bin1',
+            scale: 1.5,
+            duration: 3000,
+            easing: 'spring',
+          }).add({
+            targets: '.row'+(i+1)+'bin0',
+            opacity: [1,0],
+            easing: 'spring',
+          }).add({
+            targets: '#encryptedValue'+(i+1),
+            opacity: [0, 1],
+          }).add({
+            targets: '#encryptedValue'+(i+1),
+            translateX: [600, 0],
+            easing: 'easeOutExpo',
+          })
+        }
+        timelineTDcalEncVal.add({
+            targets: '#finalValues',
+            translateY: [600, 0],
+            easing: 'easeOutExpo',
+          });
+        
+        document.querySelector('#play4').onclick = timelineTDcalEncVal.play;
+        document.querySelector('#pause4').onclick = timelineTDcalEncVal.pause;
+        document.querySelector('#restart4').onclick = timelineTDcalEncVal.restart;
+        
+        visualizeTDprogress4.addEventListener('input', function() {
+          timelineTDcalEncVal.seek(timelineTDcalEncVal.duration * (visualizeTDprogress4.value / 100));
+        });
+        
+        
+        
+        //Generate Inverse apply to ctext
+        //Calculate Encrypted Values
+        var visualizeTDprogress5 = document.querySelector('#progress5');
+        var timelineTDinvCText = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress5.value = timelineTDinvCText.progress;
+          }
+        });
+        
+        for(var i=0; i<targetRows5.length; i++){
+          timelineTDinvCText.add({
+            targets: '#yValBox'+(i+1),
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: targetRows5[i],
+            translateY: [400, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: '#yValBox'+(i+1),
+            opacity: [0, 1],
+          });
+        }
+        
+        
+        document.querySelector('#play5').onclick = timelineTDinvCText.play;
+        document.querySelector('#pause5').onclick = timelineTDinvCText.pause;
+        document.querySelector('#restart5').onclick = timelineTDinvCText.restart;
+        
+        visualizeTDprogress5.addEventListener('input', function() {
+          timelineTDinvCText.seek(timelineTDinvCText.duration * (visualizeTDprogress5.value / 100));
+        });
+        
+        
+        //Calculate Binary using Trapdoor
+        var visualizeTDprogress6 = document.querySelector('#progress6');
+        var timelineTDbinaryTrapdoor = anime.timeline({
+          autoplay: false,
+          update: function(anim) {
+            visualizeTDprogress6.value = timelineTDbinaryTrapdoor.progress;
+          }
+        });
+        
+        var numberOfKeys = targetRows6.shift();
+        var pkArray = $('#initSetup_privateKey').val().split(',');
+        for(var i=0; i<targetRows6.length; i++){
+          timelineTDbinaryTrapdoor.add({
+            targets: '#dBin'+(i+1),
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+          }).add({
+            targets: targetRows6[i],
+            translateY: [-300, 0],
+            easing: 'easeOutExpo',
+          })
+          
+          for(var j=pkArray.length;j>0;j--){
+            timelineTDbinaryTrapdoor.add({
+              targets: '.frow'+(i+1)+'bin1i'+j,
+              scale: 1.5,
+              duration: 30,
+              easing: 'spring',
+            })
+          }
+          
+          
+          timelineTDbinaryTrapdoor.add({
+            targets: '#dBin'+(i+1),
+            opacity: [0, 1],
+          }).add({
+            targets: '#dBin'+(i+1),
+            translateX: [600, 0],
+            easing: 'easeOutExpo',
+          })
+        }
+        timelineTDbinaryTrapdoor.add({
+            targets: '#finalBinValues',
+            translateY: [600, 0],
+            easing: 'easeOutExpo',
+          });
+        
+        document.querySelector('#play6').onclick = timelineTDbinaryTrapdoor.play;
+        document.querySelector('#pause6').onclick = timelineTDbinaryTrapdoor.pause;
+        document.querySelector('#restart6').onclick = timelineTDbinaryTrapdoor.restart;
+        
+        visualizeTDprogress6.addEventListener('input', function() {
+          timelineTDbinaryTrapdoor.seek(timelineTDbinaryTrapdoor.duration * (visualizeTDprogress6.value / 100));
+        });
+        
+        
+        
+      }
+      
+      function removeComma(message){
+        message = message.replace(/,+/g, '');
+        return message;
+      }
+      
+          </script>
+      
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Quick Example</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" id="form_initSetup">
+              <div class="box-body">
+                <div>
+                  <label>Private Key:</label>
+                  <input type="text" class="form-control" id="initSetup_privateKey" placeholder="E.g. 2,5,9,21,45,103,215,450" value="2,5,9,21,45,103,215,450">
+                </div>
+                <div>
+                  <label>Modulo:</label>
+                  <input type="number" class="form-control" id="initSetup_prime" placeholder="Prime" value="1801">
+                </div>
+                <div>
+                  <label>Multiplier:</label>
+                  <input type="number" class="form-control" id="initSetup_multiplier" placeholder="Multiplier" value="877">
+                </div>
+                <div>
+                  <label>Message:</label>
+                  <input type="text" class="form-control" id="initSetup_msg" placeholder="Enter the message you want to encrypt." value="hi">
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="button" class="btn btn-primary" id="btn_initSetupSubmit">Submit</button>
+              </div>
+            </form>
+            <!-- /. form end -->
+          </div>
+          <!-- /.init set-up form -->
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Algo Information</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <table class="table table-condensed" style="table-layout: fixed; word-wrap:break-word;">
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Private Key</td>
+                  <td id="infoPrivateKey"></td>
+                </tr>
+                <tr>
+                  <td>Modulo (p)</td>
+                  <td id="infoPrime"></td>
+                </tr>
+                <tr>
+                  <td>Multiplier</td>
+                  <td id="infoMultiplier"></td>
+                </tr>
+                <tr>
+                  <td>Inverse of the Multiplier (a)</td>
+                  <td id="infoMultiplierInverse"></td>
+                </tr>
+                <tr>
+                  <td>Public Key</td>
+                  <td id="infoPublicKey"></td>
+                </tr>
+                <tr>
+                  <td>Original Message</td>
+                  <td id="infoOrigMsg"></td>
+                </tr>
+                <tr>
+                  <td>Message in binary</td>
+                  <td id="infoMsgBinary"></td>
+                </tr>
+                <tr>
+                  <td>Cipher Text (T)</td>
+                  <td id="infoCipherText"></td>
+                </tr>
+                <tr>
+                  <td>Y = a^-1 x T mod p</td>
+                  <td id="infoY"></td>
+                </tr>
+                <tr>
+                  <td>Decrypted Message in binary</td>
+                  <td id="infoDecryptedMsgBinary"></td>
+                </tr>
+                <tr>
+                  <td>Decrypted Message</td>
+                  <td id="infoDecryptedMsg"></td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+        
+      </div>
+      <!-- /.row -->
+    
+    
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h3 class="box-title">Trapdoor Knapsack Animation</h3>
+      <h4 class="box-title" style="text-decoration: underline;">Encryption Process</h4>
+    </div>  
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Key Generation</h3>
+        </div>
+        <div class="box-body" style="max-height: 500px; overflow: auto;">
+          <div id="moduloHolder" class="col-md-6 col-sm-6 col-xs-6">
+            <!--printing from AJAX-->
+          </div>
+          <div id="multiplierHolder" class="col-md-6 col-sm-6 col-xs-6">
+            <!--printing from AJAX-->
+          </div>
+          <div id="pkHolder" class="col-md-3 col-sm-3 col-xs-3" style="border-right-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+          <div id="calHolder" class="col-md-6 col-sm-4 col-xs-4" style="overflow: hidden; text-align: center;">
+            <!--printing from AJAX-->
+          </div>
+          <div id="pubkeyHolder" class="col-md-3 col-sm-3 col-xs-3" style="border-left-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play1">Play</button>
+            <button class="btn btn-default" id="pause1">Pause</button>
+            <button class="btn btn-default" id="restart1">Restart</button>
+          </div>
+          <input id="progress1" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">String Preparation</h3>
+        </div>
+        <div class="box-body" style="max-height: 500px; overflow: auto;">
+            <div id="messageHolder" class="col-md-6 col-sm-6 col-xs-6">
+              <!--printing from AJAX-->
+            </div>
+            <div id="binMessageHolder" class="col-md-6 col-sm-6 col-xs-6">
+              <!--printing from AJAX-->
+            </div>
+          
+          <div id="strHolder" class="col-md-3 col-sm-3 col-xs-3" style="border-right-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+          <div id="binHolder" class="col-md-9 col-sm-9 col-xs-9" style="overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play2">Play</button>
+            <button class="btn btn-default" id="pause2">Pause</button>
+            <button class="btn btn-default" id="restart2">Restart</button>
+          </div>
+          <input id="progress2" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Binary Preparation (Padding)</h3>
+        </div>
+        <div class="box-body" style="max-height: 500px; overflow: auto;">
+          <div id="BinMapHolder" class="col-md-12 col-sm-12 col-xs-12">
+            <!--printing from AJAX-->
+          </div>
+          <div id="groupHolder" class="col-md-6 col-sm-6 col-xs-6" style="border-right-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <table class="table table-condensed" id="groupHolderTable" style="table-layout: fixed; word-wrap:break-word;">
+            </table>
+            <!--printing from AJAX-->
+          </div>
+          <div id="binMessageHolder2" class="col-md-6 col-sm-6 col-xs-6" style="overflow: hidden;  word-wrap:break-word;">
+            <!--printing from AJAX-->
+          </div>
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play3">Play</button>
+            <button class="btn btn-default" id="pause3">Pause</button>
+            <button class="btn btn-default" id="restart3">Restart</button>
+          </div>
+          <input id="progress3" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Calculate Encrypted Values</h3>
+        </div>
+        <div id="calEncDiv" class="box-body" style="max-height: 500px; overflow: auto;">
+          <!--printing from AJAX-->
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play4">Play</button>
+            <button class="btn btn-default" id="pause4">Pause</button>
+            <button class="btn btn-default" id="restart4">Restart</button>
+          </div>
+          <input id="progress4" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h4 class="box-title" style="text-decoration: underline;">Decryption Process</h4>
+    </div>  
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Generate Inverse of Multiple & Apply to Final Cipher Text</h3>
+        </div>
+        <div class="box-body" style="max-height: 500px; overflow: auto;">
+          <div id="multiplierInverseHolder" class="col-md-6 col-sm-6 col-xs-6">
+            <!--printing from AJAX-->
+          </div>
+          <div id="modHolder" class="col-md-6 col-sm-6 col-xs-6">
+            <!--printing from AJAX-->
+          </div>
+          <div id="cipherHolder" class="col-md-3 col-sm-3 col-xs-3" style="border-right-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+          <div id="decryptCalHolder" class="col-md-6 col-sm-4 col-xs-4" style="overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+          <div id="tempValueHolder" class="col-md-3 col-sm-3 col-xs-3" style="border-left-style: solid; border-width: thin; border-color: #e4e8f0; overflow: hidden;">
+            <!--printing from AJAX-->
+          </div>
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play5">Play</button>
+            <button class="btn btn-default" id="pause5">Pause</button>
+            <button class="btn btn-default" id="restart5">Restart</button>
+          </div>
+          <input id="progress5" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Convert to Binary using Trapdoor</h3>
+        </div>
+        <div id="trapdoorBody" class="box-body" style="max-height: 500px; overflow: auto;">
+          <!--printing from AJAX-->
+        </div>
+        
+        <div class="box-footer">
+          <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+            <button class="btn btn-primary" id="play6">Play</button>
+            <button class="btn btn-default" id="pause6">Pause</button>
+            <button class="btn btn-default" id="restart6">Restart</button>
+          </div>
+          <input id="progress6" step=".001" type="range" min="0" max="100" value="0"></input>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+  </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!--JH include end-->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      CryptBase
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

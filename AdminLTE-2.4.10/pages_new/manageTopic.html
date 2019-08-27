@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CryptBase | Manage Topic </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="dist/css/skins/skin-red.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    var fullName = "{{ fullName }}";
+    var userType = "{{ userType }}";
+
+    console.log(fullName);
+  </script>
+
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-red sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="/home" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>C</b>BB</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Crypt</b>Base</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="/dist/img_new/userDefault_girl.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">
+                <script>
+                  document.write(fullName)
+                </script>
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="/dist/img_new/userDefault_girl.png" class="img-circle" alt="User Image">
+
+                <p>
+                  <script>
+                  document.write(fullName)
+                  </script> 
+                  - 
+                  <script>
+                  document.write(userType)
+                  </script>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/profile" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/signout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img_new/professor.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p class="displayUsername"></p>
+        </div>
+      </div>
+
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+          <!-- Optionally, you can add icons to the links -->
+          <li class="active"><a href="/manageTopic"><i class="fa fa-link"></i> <span>Manage Topic</span></a></li>
+          <li class="active"><a href="/profile"><i class="fa fa-link"></i> <span>Profile</span></a></li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Manage Topics 
+      </h1>
+        
+    </section>
+
+    <!-- Loading the topic info -->
+    <script>
+      $(document).ready(function(){
+        // get data from nodejs
+        var userid = "{{ userid }}";
+        console.log("current user is " + userid);
+        var table = document.getElementById("topicTable");
+        var topicData = "{{ topicData }}";
+        var topicDataJson = JSON.parse(topicData.replace(/(&quot\;)/g,"\""));
+
+        var tableBody = "";
+        // creating content for table
+        for(var i=0; i < topicDataJson.length; i++){
+          console.log(topicDataJson[i]);
+          tableBody += "<tr><td class='class-topicID'>"+topicDataJson[i].topicid+"</td>";
+          tableBody += "<td>"+topicDataJson[i].topicName+"</td>";
+          tableBody += "<td>"+topicDataJson[i].description+"</td>";
+          tableBody += "<td>"+topicDataJson[i].fullName+"</td>";
+          if(userid==topicDataJson[i].creator){
+            // update username
+            var usernameClass = document.getElementsByClassName("displayUsername");  
+            for(var j = 0; j < usernameClass.length; j++){
+              usernameClass[j].innerText = topicDataJson[i].fullName;    // Change the content
+            }
+
+            tableBody += "<td>" //"\\"+userid+
+            tableBody += "<div class=\"btn-group\">"
+            tableBody += "<a href=\"topicOverview\\"+topicDataJson[i].topicid+"\"><button type=\"button\" class=\"btn btn-default\">Overview</button></a>" // show student table
+            tableBody += "<a href=\"manage_Lesson\\"+topicDataJson[i].topicid+"\"><button type=\"button\" class=\"btn btn-default\">Lesson</button></a>" // allow lecturer to change content
+            tableBody += "<button type=\"button\" class=\"btn btn-default btn-editTopicModal\" data-toggle=\"modal\" data-target=\"#modal-topicEdit\">Update Info</button>" // allow lecturer to change content
+            tableBody += "<a href=\"manage_Quiz\\"+topicDataJson[i].topicid+"\"><button type=\"button\" class=\"btn btn-default\">Quiz</button></a>"
+            // Dynamic button -> https://stackoverflow.com/questions/41440446/dynamically-create-delete-buttons
+            // tableBody += "<button type=\"button\" class=\"btn btn-default btn-deleteTopicModal\" data-toggle=\"modal\" data-target=\"#modal-topicDelete\">Delete</button>" // delete topic
+            tableBody += "</div></td>";
+          }else{
+            tableBody += "<td>"+"N/A"+"</td>";
+          }
+          tableBody += "</tr>";
+        }
+        document.getElementById("topicTableBody").innerHTML = tableBody;
+
+        // Table related useful references: https://stackoverflow.com/questions/14460421/get-the-contents-of-a-table-row-with-a-button-click
+        var currentTopicID = "1";
+        // To update the topic ID in the delection modal
+        $(".btn-deleteTopicModal").click(function(){
+          var $row = $(this).closest("tr"),tds = $row.find("td:nth-child(1)").text();
+          document.getElementById("deleteModalTopicID").innerHTML = tds;
+          currentTopicID = tds;
+        });
+
+        // To update the topic ID in the edition modal
+        $(".btn-editTopicModal").click(function(){
+          var $row = $(this).closest("tr");
+          var id = $row.find("td:nth-child(1)").text();
+
+          document.getElementById("editModalTopicID").innerHTML = id;
+
+          currentTopicID = id;
+        });
+
+        // To update the topic ID in the edition modal
+        // $(".btn-linkToManageTopic").click(function(){
+        //   var $row = $(this).closest("tr");
+        //   var id = $row.find("td:nth-child(1)").text();
+        //   var name = $row.find("td:nth-child(4)").text();
+        //   currentTopicID = id;
+
+        //   $.ajax({
+        //     type:"GET",
+        //     url: 'manage_Lesson',
+        //     data: { 
+        //       ajaxTopicID: currentTopicID,
+        //       ajaxCreator: name
+        //     }
+        //   });
+        // });
+
+        // To call the topic deletection
+        $("#btn-deleteTopicCfm").click(function(){
+          // submit the topic ID to nodejs 
+          console.log(currentTopicID)
+          $.ajax({
+            type:"POST",
+            url: 'manage_deleteTopic',
+            data: { 
+              ajaxTopicID: currentTopicID
+            },
+            success: (data) => {
+              document.getElementById("updateCfmMessage").innerHTML = data;
+            }
+          });
+        });
+
+        // To call the topic update
+        $("#btn-updateTopicCfm").click(function(){
+          // submit the topic ID to nodejs 
+          console.log(currentTopicID);
+
+          var topicName = $('#form-topicName').val();
+          var topicDesc = $('#form-topicDesc').val();
+          
+          if(topicName!="" & topicDesc!=""){
+            console.log(topicName+ " | " +topicDesc);
+            document.getElementById("updateCfmMessage").innerHTML = "";
+            $.ajax({
+              type:"POST",
+              url: 'manage_updateTopic',
+              data: {
+                ajaxTopicID: currentTopicID,
+                ajaxNewTopicName: topicName, 
+                ajaxNewTopicDescription: topicDesc
+              },
+              success: (data) => {
+                document.getElementById("updateCfmMessage").innerHTML = data;
+              }
+            });
+          }else{
+            document.getElementById("updateCfmMessage").innerHTML = "Please fill in both boxes. ";
+          }
+
+        });
+        // To call the topic create
+        $("#btn-createTopicCfm").click(function(){
+
+          console.log("create topic (userid check) :" + userid);
+          var newTopicID = $('#form-topicIDCreate').val();
+          if(newTopicID!=""){
+            var isIDnew = true;
+            // var table = document.getElementById("topicTableBody");
+            // for(var i = 0; i < table.rows.length; i++){
+            //   var cells = table.rows.item(i).cells;
+            //   console.log(cells[0].innerHTML);
+            //   if(cells[0].innerHTML==newTopicID){
+            //     isIDnew = false;
+            //   }
+            // }
+
+            // Get all the topic ID based on the class
+            var topicID_class = document.getElementsByClassName("class-topicID");
+            for(var i = 0; i < topicID_class.length; i++){ // check if the ID exists
+              console.log(topicID_class[i].innerHTML);
+              if(topicID_class[i].innerHTML==newTopicID){
+                isIDnew = false;
+              }
+            }
+
+            // if the id is new, pass information to nodejs to do update table
+            if(isIDnew){
+              var topicName = $('#form-topicNameCreate').val();
+              var topicDesc = $('#form-topicDescCreate').val();
+
+              if(topicName!="" & topicDesc!=""){
+                console.log("New topic: "+topicName+ " | " +topicDesc);
+                document.getElementById("createCfmMessage").innerHTML = "";
+                $.ajax({
+                  type:"POST",
+                  url: 'manage_createTopic',
+                  data: {
+                    ajaxUserid: userid,
+                    ajaxNewTopicID:newTopicID,
+                    ajaxNewTopicName: topicName, 
+                    ajaxNewTopicDescription: topicDesc
+                  },
+                  success: (data) => {
+                    document.getElementById("createCfmMessage").innerHTML = data;
+                  }
+                });
+              }else{
+                document.getElementById("createCfmMessage").innerHTML = "Please fill in both boxes. ";
+              }
+            }else{
+              document.getElementById("createCfmMessage").innerHTML = "Topic ID existed!!";
+            }
+          }else{
+            document.getElementById("createCfmMessage").innerHTML = "Topic ID cannot be null";
+          }
+
+        });
+      });
+
+     
+    </script>  
+    <!-- /Loading the topic info -->
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-topicCreate">Create New Topic</button>
+          <br /><br />
+          <div class="box box-primary">
+            <table id="topicTable" class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Topic ID</th>
+                  <th>Topic Name</th>
+                  <th>Description</th>
+                  <th>Teacher In Charge</th>
+                  <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="topicTableBody">
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- /.row-->
+      <!-- Modal - Edit Topics -->
+      <div class="modal fade" id="modal-topicEdit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Update Topic Information for <span id="editModalTopicID"></span></h4>
+            </div>
+            <form role="form">
+              <div class="modal-body">
+              
+                <div class="form-group">
+                  <label for="TopicName">Topic Name</label>
+                  <input type="text" class="form-control" id="form-topicName" placeholder="Topic Name..." required>
+                </div>
+                <div class="form-group">
+                  <label for="TopicDescription">Description</label>
+                  <input type="text-area" class="form-control" id="form-topicDesc"  placeholder="Description..." required>
+                </div>  
+                <p id="updateCfmMessage"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-updateTopicCfm">Save changes</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /Modal - Edit Topics -->
+
+      <!-- Modal - Create Topics -->
+      <div class="modal fade" id="modal-topicCreate">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Create Topic With Information <span id="createModalTopicID"></span></h4>
+            </div>
+            <form role="form">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="TopicName">Topic ID</label>
+                  <input type="text" class="form-control" id="form-topicIDCreate" placeholder="Topic Name..." required>
+                </div>
+                <div class="form-group">
+                  <label for="TopicName">Topic Name</label>
+                  <input type="text" class="form-control" id="form-topicNameCreate" placeholder="Topic Name..." required>
+                </div>
+                <div class="form-group">
+                  <label for="TopicDescription">Description</label>
+                  <input type="text-area" class="form-control" id="form-topicDescCreate"  placeholder="Description..." required>
+                </div>  
+                <p id="createCfmMessage"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-createTopicCfm">Save changes</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /Modal - Create Topics -->
+      
+      <!-- Modal - Delete Topics -->
+      <div class="modal fade" id="modal-topicDelete">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><i class="fa fa-warning"></i> Confirmation!</h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                    Are you sure you want to delete the topic (<b id="deleteModalTopicID"></b>) from database?
+                    <br />**You cannot undo this action.
+                </p>
+
+                <p id="deletionCfmMessage"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btn-deleteTopicCfm">Yes, I am sure.</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /Modal - Delete Topics -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      CryptBase
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>
