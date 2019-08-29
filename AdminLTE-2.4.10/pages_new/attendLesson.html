@@ -217,11 +217,17 @@ desired effect
             footerBody += "    ";
             footerBody += "<a href=\"/attendLesson/"+topicid+"/"+(lessonid+1)+"\"><button class=\"btn btn-danger\"> Next Lesson >> </button></a>";
           }else{
-            footerBody += "<a href=\"/attendLesson/"+topicid+"/"+(lessonid-1)+"\"><button class=\"btn btn-warning\"> << Previous Lesson </button></a>";
+            if(topicid=="CT001"){
+              footerBody += "<a href=\"/attendLesson/"+topicid+"/"+(lessonid-1)+"\"><button class=\"btn btn-warning\"> << Previous Lesson </button></a>";
+              footerBody += "    ";
+              footerBody += "<a href=\"/trapdoorAnimation\"><button class=\"btn btn-danger\"> Next Lesson >> </button></a>";
+            }else{
+              footerBody += "<a href=\"/attendLesson/"+topicid+"/"+(lessonid-1)+"\"><button class=\"btn btn-warning\"> << Previous Lesson </button></a>";
+            }
           }
           document.getElementById("lesson-footer").innerHTML = footerBody;
         }catch{
-          document.getElementById("lesson-body").innerHTML = "NO MORE LESSON";
+            document.getElementById("lesson-body").innerHTML = "NO MORE LESSON";
         }
 
       }); // end of document ready

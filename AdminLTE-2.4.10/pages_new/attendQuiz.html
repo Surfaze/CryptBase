@@ -272,6 +272,7 @@ desired effect
             },
             success: (data) => {
               document.getElementById("updateCfmMessage").innerHTML = data+totalPoint;
+              document.getElementById("btn-submitQuiz").style.display = "none"
             }
           });
         });
